@@ -1,0 +1,11 @@
+<picker class="rili-box" mode="date" fields="month" value='{{yearmonthstr}}' bindchange="sltyearmonth">
+  <label class='s-t-tag-box'>
+    {{yearmonth}}</label>
+</picker>
+<view wx:if="{{flag == 1}}">
+  <canvas class="canvas" canvas-id="pieGraph"></canvas>
+</view>
+<view wx:if="{{flag == 0}}" class="tip">
+  <view>本月还没有消费记录哦！</view>
+</view>
+

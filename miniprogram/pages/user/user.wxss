@@ -1,0 +1,51 @@
+.header {
+  height: 360rpx;
+  width: 100%;
+  background-size: cover;
+  position: relative;
+  margin-top: -1rpx;
+  overflow: hidden;
+}
+.header_back {
+  width: 110%;
+  height: 360rpx;
+  position: absolute;
+  top: 0rpx;
+  left: -5%;
+  bottom: 0rpx;
+  right: 0rpx;
+  border-bottom-left-radius: 25%;
+  border-bottom-right-radius: 25%;
+}
+.header_box {
+  position: absolute;
+  top: 0rpx;
+  left: 0rpx;
+  bottom: 0rpx;
+  right: 0rpx;
+  z-index: 3;
+  padding: 60rpx 30rpx 20rpx;
+}
+.picture {
+  width: 180rpx;
+  height: 180rpx;
+  border-radius: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+}
+.header_name {
+  font-size: 28rpx;
+  text-align: center;
+  color: white;
+  margin-top: 15rpx;
+}
+.banner {
+  background-color: white;
+  border-radius: 20rpx;
+  overflow: hidden;
+  margin: 30rpx;
+}
+.cell-title{
+  font-size: 28rpx;
+}

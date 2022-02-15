@@ -1,0 +1,29 @@
+.btnbox {
+  clear: both;
+  margin-top: 10px;
+}
+
+.btnitem2 {
+  width: 100%;
+  text-align: center;
+}
+
+.btnsave {
+  border-radius: 4px;
+  margin: 0 auto;
+}
+
+.btnitem2 .btnsave {
+  background-color: #f6c142;
+  color: #fff;
+  height: 42px;
+  line-height: 42px;
+}
+
+.btnitem2 .btnsave-hover {
+  background-color: #f4d95b;
+}
+
+.btnitem2 .btnsave::after {
+  border: none;
+}

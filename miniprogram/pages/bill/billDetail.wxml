@@ -1,0 +1,68 @@
+<view class='m-list'>
+  <view class='m-l-left'>
+    <view class='iconfont-box m-l-timg' style='background-color: {{billdetail.iconbg}};color:#fff;'>
+      <!-- <label class='iconfont {{billdetail.tagimg}}'></label> -->
+      <van-icon name="{{billdetail.tagimg}}" size="48px"/>
+    </view>
+  </view>
+  <view class='m-l-right'>
+    <view class='m-l-tagname'>
+      {{billdetail.tag}}
+    </view>
+    <view class='m-l-money'>
+      {{billdetail.money}}
+    </view>
+  </view>
+</view>
+<view class='zhanwei'></view>
+
+<view class='detail'>
+  <view class='detail-item'>
+    <view class='detail-item-left'>
+      类型
+    </view>
+    <view class='detail-item-right' wx:if='{{billdetail.type==2}}'>
+      支出
+    </view>
+    <view class='detail-item-right' wx:if='{{billdetail.type==1}}'>
+      收入
+    </view>
+  </view>
+  <view class='detail-item'>
+    <view class='detail-item-left'>
+      金额
+    </view>
+    <view class='detail-item-right'>
+      {{billdetail.money}}
+    </view>
+  </view>
+  <view class='detail-item'>
+    <view class='detail-item-left'>
+      记录时间
+    </view>
+    <view class='detail-item-right'>
+      {{billdetail.date}}
+    </view>
+  </view>
+  <view class='detail-item'>
+    <view class='detail-item-left'>
+      备注
+    </view>
+    <view class='detail-item-right'>
+      {{billdetail.remark}}
+    </view>
+  </view>
+</view>
+
+<view class='content btnbox'>
+  <view class='btnitem1'>
+    <button bindtap="delwater" class='btnsave' hover-class="btnsave-hover" data-id='{{billdetail._id}}'>
+      删除
+    </button>
+  </view>
+  <view class='btnitem2'>
+    <button bindtap="updatewater" class='btnsave' hover-class="btnsave-hover" data-mdetail='{{billdetail}}'>
+      编辑
+    </button>
+  </view>
+</view>

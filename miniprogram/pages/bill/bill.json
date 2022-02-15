@@ -1,0 +1,9 @@
+{
+  "disableScroll": true, 
+  "enablePullDownRefresh": true, 
+  "backgroundTextStyle": "dark", 
+  "usingComponents": {
+    "van-icon": "@vant/weapp/icon/index",
+    "van-progress": "@vant/weapp/progress/index"
+  }
+}

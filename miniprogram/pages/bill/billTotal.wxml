@@ -1,0 +1,70 @@
+<view class="header">
+  <image class="header_back" src="../../images/background2.png"></image>
+  <view class="header_box">
+    <view class='showbox-top'>
+      <view class='s-t-money'>
+        <label class='s-t-money-box'>
+          {{jieyu}}
+        </label>
+      </view>
+      <view class='s-t-tag'>
+        <picker class="rili-box" mode="date" fields="year" value='{{yearstr}}' bindchange="sltyear">
+          <label class='s-t-tag-box'>
+            {{year}} 资金结余</label>
+        </picker>
+      </view>
+    </view>
+    <view class='showbox-down'>
+      <view class='s-d-item'>
+        <view class='s-d-item-top'>
+          {{sumin}}
+        </view>
+        <view class='s-d-item-down'>
+          本年收入
+        </view>
+      </view>
+      <view class='s-d-item'>
+        <view class='s-d-item-top'>
+          {{sumout}}
+        </view>
+        <view class='s-d-item-down'>
+          本年支出
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<scroll-view scroll-y="true" class='mbox'  bindscrolltolower='searchScrollLower'  bindscrolltoupper="bindscrolltoupper">
+    <view class='reloadbox' style='display:{{reload}}'>
+      快来记一笔！
+    </view>
+
+    <view class='mbox-item' wx:for="{{list}}" wx:key="key">
+      <view class='m-t-title'>
+        <view class='m-t-t-left'>{{item.date}}</view>
+      </view>
+      <view class='m-list'>
+        <view bindtap='waterdetail' data-id='{{item._id}}'>
+          <view class='m-l-left'>
+            <view class='iconfont-box m-l-timg' style='background-color: {{item.iconbg}};color:#fff;'>
+              <van-icon name="{{item.tagimg}}" size="36px"/>
+            </view>
+          </view>
+          <view class='m-l-right'>
+            <view class='m-l-tagname'>
+              {{item.tag}}
+              <label class='m-l-tagremark'>{{item.remark}}</label>
+            </view>
+            <view class='m-l-money' wx:if="{{item.type == 2}}" style="color:#32CD32">
+              -{{item.money}}
+            </view>
+            <view class='m-l-money' wx:if="{{item.type == 1}}" style="color:red">
+              +{{item.money}}
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+
+  </scroll-view>

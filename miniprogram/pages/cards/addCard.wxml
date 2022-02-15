@@ -1,0 +1,95 @@
+<!--pages/cards/addcard.wxml-->
+<view class="content">
+  <view class='cardbox'>
+    <view class='cardbox-item'>
+      <image class='cardbox-img' src='/images/{{cardimg}}.png'></image>
+    </view>
+    <form bindsubmit="formSubmit">
+      <view class="t-item">
+        <view class='t-item-left'>
+          账户名称
+        </view>
+        <view class='t-item-right'>
+          <input name='cardname' placeholder="账户名称" maxlength="10" value='{{cardinfo.cardname}}' auto-focus/>
+        </view>
+      </view>
+      <view class="t-item" style='display:{{fq_hide}};'>
+        <view class='t-item-left'>
+          固定额度
+        </view>
+        <view class='t-item-right'>
+          <input name='fixed_quota' type="digit" placeholder="0.00" value='{{cardinfo.fixed_quota}}' maxlength="10" /><!--digit带小数点的数字键盘-->
+        </view>
+      </view>
+      <view class="t-item" style='display:{{uq_hide}};'>
+        <view class='t-item-left'>
+          已用额度
+        </view>
+        <view class='t-item-right'>
+          <input name='used_quota' type="digit" placeholder="已用额度" value='{{cardinfo.used_quota}}' maxlength="10" />
+        </view>
+      </view>
+      <view class="t-item" style='display:{{aq_hide}};'>
+        <view class='t-item-left'>
+          {{fq_txt}}
+        </view>
+        <view class='t-item-right'>
+          <input name='available_quota' type="digit" placeholder="可用额度" value='{{cardinfo.available_quota}}' />
+        </view>
+      </view>
+      <view class="t-item" style='display:{{bd_hide}};'>
+        <view class='t-item-left'>
+          账单日
+        </view>
+        <view class='t-item-right'>
+          <input name='bill_date' type="number" maxlength='2' placeholder="账单日" value='{{cardinfo.bill_date}}' />
+        </view>
+      </view>
+      <view class="t-item" style='display:{{rd_hide}};'>
+        <view class='t-item-left'>
+          还款日
+        </view>
+        <view class='t-item-right'>
+          <input name='repayment_date' type="number" maxlength='2' placeholder="还款日" value='{{cardinfo.repayment_date}}' />
+        </view>
+      </view>
+      <view class="t-item" style='display:{{cn_hide}};'>
+        <view class='t-item-left'>
+          卡号
+        </view>
+        <view class='t-item-right'>
+          <input name='card_number' type="number" maxlength='4' placeholder="请填写卡号后四位" value='{{cardinfo.card_number}}' />
+        </view>
+      </view>
+      <view class="t-item">
+        <view class='t-item-left'>
+          备注
+        </view>
+        <view class='t-item-right'>
+          <input name='remarks' maxlength='20' placeholder="备注说明" value='{{cardinfo.remarks}}' />
+        </view>
+      </view>
+      <view class='savecardbox' style='display:{{add_hide}};'>
+        <button formType="submit" type="primary" class="btnsave" loading="{{loading}}" bindtap="savecard"> 保存 </button>
+      </view>
+      <view class='content btnbox' style='display:{{update_hide}};'>
+        <view class='btnitem1'>
+          <button bindtap="delcard" class='btnsave' hover-class="btnsave-hover" data-cardid='{{cardinfo._id}}'>
+            删除
+          </button>
+        </view>
+        <view class='btnitem2'>
+          <button formType="submit" type="primary" class='btnsave' loading="{{loading}}" hover-class="btnsave-hover">
+            保存
+          </button>
+        </view>
+      </view>
+      <view class="hide">
+        <input name='user' value='{{openid}}' />
+        <input name='id' value='{{id}}' />
+        <input name='cardtype' value='{{cardtype}}' />
+        <input name='typename' value='{{typename}}' />
+      </view>
+    </form>
+  </view>
+</view>

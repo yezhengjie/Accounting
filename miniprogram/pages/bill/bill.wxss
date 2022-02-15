@@ -1,0 +1,232 @@
+.content {
+  padding: 0 5px;
+}
+
+.mbook {
+  overflow: hidden;
+}
+
+.showbox {
+  background-color: #FFC125;
+  clear: both;
+  width: 100%;
+  height: 150px;
+  z-index: 100;
+}
+
+.showbox-top {
+  text-align: center;
+}
+
+.s-t-money {
+  font-size: 2rem;
+  font-family: 'KaiTi';
+  padding: 20rpx 0 10rpx;
+}
+
+.s-t-money-box image {
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.s-t-tag {
+  font-size: 0.8rem;
+  margin-top: 10rpx;
+}
+
+.s-t-tag-box {
+  border-radius: 50rpx;
+  padding: 5rpx 20rpx;
+}
+
+/* .s-t-tag-box image {
+  width: 25rpx;
+  height: 25rpx;
+} */
+
+.showbox-down {
+  margin-top: 35rpx;
+}
+
+.s-d-item {
+  width: 50%;
+  float: left;
+  text-align: center;
+}
+
+.s-d-item-top {
+  font-family: 'KaiTi';
+  font-size: 1.2rem;
+}
+
+.s-d-item-down {
+  font-size: 0.8rem;
+}
+
+.mbox {
+  min-height: 200px;
+  clear: both;
+}
+
+.reloadbox {
+  width: 100%;
+  height: 400rpx;
+  text-align: center;
+}
+
+.reloadbox .topbox {
+  margin-top: 100rpx;
+}
+
+.reloadbox .topbox image {
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.reloadbox .downbox {
+  font-size: 25rpx;
+}
+
+.mbox-item {
+  clear: both;
+}
+
+.m-t-title {
+  background-color: #f8fafc;
+  height: 30px;
+  line-height: 30px;
+  font-size: 14px;
+  color: #959595;
+}
+
+.m-t-t-left {
+  float: left;
+  margin-left: 10px;
+}
+
+.m-t-t-right {
+  float: right;
+  margin-right: 10px;
+}
+
+.m-list {
+  /* height: 36rpx; */
+  /* line-height: 36rpx; */
+  clear: both;
+  vertical-align: middle;
+}
+
+.m-l-left {
+  float: left;
+  /* padding: 8px 10px 0; */
+  width: 18%;
+  /* text-align: center; */
+}
+
+.m-l-timg {
+  background-color: #f6c142;
+  margin: 8px 10px 0;
+}
+
+.m-l-right {
+  width: 82%;
+  float: left;
+  /* margin-right: 10px; */
+  /* background-color: #f0f0f0;  */
+  border-bottom: 0.5px solid #ededed;
+  height: 48px;
+  line-height: 48px;
+}
+
+.mbox-item .m-list:last-child .m-l-right {
+  border-bottom: 0px;
+}
+
+.m-l-tagname {
+  float: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /* 文本溢出显示省略符号来代表被修剪的文本。 */
+  white-space: nowrap;
+  width: 66%;
+  color: #959595;
+}
+
+.m-l-tagremark {
+  color: #959595;
+  font-size: 13px;
+}
+
+.m-l-money {
+  float: right;
+  margin-right: 4%;
+  font-weight: 500;
+  font-size: 20px;
+  width: 30%;
+  text-align: right;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.addwater {
+  position: fixed;
+  bottom: 0px;
+  left: 44%;
+  height: 40px;
+}
+
+.addwater .addimg {
+  width: 40px;
+  height: 40px;
+}
+
+.xxjtbox {
+  width: 100%;
+  height: 400rpx;
+  text-align: center;
+}
+
+.xxjtbox .topbox {
+  margin-top: 200rpx;
+}
+
+.xxjtbox .topbox image {
+  width: 300rpx;
+  height: 280rpx;
+}
+
+.header {
+  height: 360rpx;
+  width: 100%;
+  background-size: cover;
+  position: relative;
+  margin-top: -1rpx;
+  overflow: hidden;
+}
+
+.header_back {
+  width: 110%;
+  height: 360rpx;
+  position: absolute;
+  top: 0rpx;
+  left: -5%;
+  bottom: 0rpx;
+  right: 0rpx;
+  border-bottom-left-radius: 25%;
+  border-bottom-right-radius: 25%;
+}
+
+.header_box {
+  position: absolute;
+  top: 0rpx;
+  left: 0rpx;
+  bottom: 0rpx;
+  right: 0rpx;
+  z-index: 3;
+  /* padding: 15rpx 30rpx 20rpx; */
+}
+
+.progress {
+  height: 10px;
+}

@@ -1,0 +1,55 @@
+{
+  "pages": [
+    "pages/bill/bill",
+    "pages/user/user",
+    "pages/statistics/statistics",
+    "pages/cards/cardItem",
+    "pages/cards/addCard",
+    "pages/cards/cardList",
+    "pages/budget/budget",
+    "pages/bill/addBill",
+    "pages/bill/billTotal",
+    "pages/bill/billDetail"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "每日记账管家",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar":{
+    "color": "#a9b7b7",
+    "selectedColor": "#FFC125",
+    "borderStyle": "white",
+    "list": [
+      {
+        "selectedIconPath": "images/statistics-actived.png",
+        "iconPath": "images/statistics.png",
+        "pagePath": "pages/statistics/statistics",
+        "text": "统计"
+      },
+      {
+        "selectedIconPath": "images/bill-actived.png",
+        "iconPath": "images/bill.png",
+        "pagePath": "pages/bill/bill",
+        "text": "账单"
+      },
+      {
+        "selectedIconPath": "images/user-actived.png",
+        "iconPath": "images/user.png",
+        "pagePath": "pages/user/user",
+        "text": "我的"
+      }
+    ]
+  },
+
+  "usingComponents": {
+    "van-cell": "@vant/weapp/cell/index",
+    "van-cell-group": "@vant/weapp/cell-group/index",
+    "van-icon": "@vant/weapp/icon/index",
+    "van-button": "@vant/weapp/button/index"
+  },
+
+  "sitemapLocation": "sitemap.json"
+
+}

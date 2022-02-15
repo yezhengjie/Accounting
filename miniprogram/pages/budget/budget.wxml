@@ -1,0 +1,46 @@
+<form bind:submit="formSubmit" report-submit="true">
+  <van-cell-group>
+    <van-field
+      value="{{ budgetinfo.budget }}"
+      type="number"
+      label="每月预算"
+      placeholder="请输入预算"
+      input-align="right"
+      bind:input="onInput"
+      name="budget"
+    />
+    <van-cell title="每日提醒">
+      <van-switch checked="{{ budget_remind }}" size="24px" bind:change="onChange" />
+    </van-cell>
+    <van-cell title="每日提醒时间" bind:click="showPopup" value="{{time_remind}}" class="{{status}}"/>
+    <van-popup show="{{ show }}" round position="bottom"
+    custom-style="height: 50%" bind:close="onClose">
+      <van-datetime-picker
+        type="time"
+        value="{{ time_remind }}"
+        min-hour="{{ minHour }}"
+        max-hour="{{ maxHour }}"
+        bind:cancel="onCancel" 
+        bind:confirm="onConfirm" 
+      />
+    </van-popup>
+  </van-cell-group>
+
+  <view class='content btnbox'>
+    <view class='btnitem2'>
+      <button formType="submit" class='btnsave' hover-class="btnsave-hover" bindtap="send" data-item="{{time_remind}}" data-remind="{{budget_remind}}">
+        保存
+      </button>
+    </view>
+    <view class="hide">
+      <input name='id' value='{{id}}' />
+      <input name='user' value='{{openid}}' />
+      <input name='budget_remind' value='{{budget_remind}}' />
+      <input name='time_remind' value='{{time_remind}}' />
+    </view>
+  </view>
+</form>
+
+
+
+

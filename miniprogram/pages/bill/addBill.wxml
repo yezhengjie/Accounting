@@ -1,0 +1,77 @@
+<form bind:submit="formSubmit" report-submit="true" bindreset="formReset">
+  <view class='nav'>
+    <view class="nav-item {{nav_color1}}" bindtap="jizhangmenu" data-item='2'>
+      支出
+    </view>
+    <view class="nav-item  {{nav_color2}}" bindtap="jizhangmenu" data-item='1'>
+      收入
+    </view>
+  </view>
+  <view class='jz-box b-bottom'>
+    <view class='jz-title'>
+      <view class='jz-t-img' style='background-color:{{tag_action_color}}'>
+        <!-- <label class='iconfont {{nav_icon}}'></label> -->
+        <van-icon name="{{nav_icon}}" size="48px"/>
+      </view>
+      <label class='jz-t-text'>{{nav_name}}</label>
+    </view>
+    <view class='jz-input-box'>
+      <input type='digit' name='money' class='jz-input' placeholder="0.00" value='{{money}}' auto-focus/>
+    </view>
+  </view>
+  <!-- 支出 -->
+  <view class='content' wx:if="{{nav_item == 2}}">
+    <scroll-view class='jz-item' scroll-y='true'>
+      <view class='jz-item-img' wx:for="{{iconlist}}" wx:key="id">
+        <view id='tag{{item.id}}' bindtap='clickimgs' data-tagname='{{item.name}}' data-tagicon='{{item.icon}}' data-tagid='{{item.id}}' data-tagcolor='{{item.iconcolor}}'>
+          <view class='jz-imgs' style='{{item.id==tag_action_id? ("background-color:"+item.iconcolor+";color:#fff") :""}}'>
+            <!-- <text class="iconfont {{item.icon}}"></text> -->
+            <van-icon name="{{item.icon}}" size="48px"/>
+          </view>
+          <view class='jz-tag'>{{item.name}}</view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+  <!-- 收入 -->
+  <view class='content' wx:if="{{nav_item == 1}}">
+    <scroll-view class='jz-item' scroll-y='true'>
+      <view class='jz-item-img' wx:for="{{iconlist}}" wx:key="id">
+        <view id='tag{{item.id}}' bindtap='clickimgs' data-tagname='{{item.name}}' data-tagicon='{{item.icon}}' data-tagid='{{item.id}}' data-tagcolor='{{item.iconcolor}}'>
+          <view class='jz-imgs' style='{{item.id==tag_action_id? ("background-color:"+item.iconcolor+";color:#fff") :""}}'>
+            <van-icon name="{{item.icon}}" size="48px"/>
+          </view>
+          <view class='jz-tag'>{{item.name}}</view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+
+  <view class='jz-gj'>
+    <view class='rili'>
+      <picker class="rili-box" mode="date" value="{{date}}" bindchange="bindDateChange">
+        {{date}}
+      </picker>
+    </view>
+    <view class='remark'>
+      <input type='text' name='remark' placeholder='备注' value="{{remark}}"></input>
+    </view>
+  </view>
+  <view class='content btnbox'>
+    <view class='btnitem2'>
+      <button formType="submit" class='btnsave' hover-class="btnsave-hover">
+        保存
+      </button>
+    </view>
+    <view class="hide">
+      <input name='user' value='{{_openid}}' />
+      <input name='id' value='{{id}}' />
+      <input name='type' value='{{nav_item}}' />
+      <input name='tag' value='{{nav_name}}' />
+      <input name='tagimg' value='{{nav_icon}}' />
+      <input name='tagid' value='{{tagid}}' />
+      <input name='date' value='{{date}}' />
+      <input name='iconbg' value='{{tag_action_color}}' />
+    </view>
+  </view>
+</form>

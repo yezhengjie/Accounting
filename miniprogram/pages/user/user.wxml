@@ -1,0 +1,30 @@
+<!--logs.wxml-->
+<view class="header">
+  <image class="header_back" src="../../images/background2.png"></image>
+  <view class="header_box">
+    <button open-type="getUserInfo" class='nobtn' lang="zh_CN" bindgetuserinfo="bindGetUserInfo">
+      <!-- <view class="flex3"> -->
+        <view class="picture">
+          <!-- <image class="picture" src="{{avatarUrl}}"></image> -->
+          <open-data type="userAvatarUrl"></open-data>
+        </view>
+        <view class="header_name">
+          <!-- <label wx:if="{{!nickName}}">未登录</label> -->
+          <!-- <label wx:else>{{nickName}}</label> -->
+          <open-data type="userNickName"></open-data>
+        </view>
+      <!-- </view> -->
+    </button>
+  </view>
+</view>
+
+<view class="banner">
+  <van-cell is-link title="每月预算" link-type="navigateTo" url="/pages/budget/budget" icon="bell" title-class="cell-title"/>
+  <van-cell is-link title="我的账单" link-type="navigateTo" url="/pages/bill/billTotal" icon="balance-list" title-class="cell-title"/>
+  <van-cell is-link title="资金账户" link-type="navigateTo" url="/pages/cards/cardList" icon="coupon"
+  title-class="cell-title"/>
+</view>
+<!-- <view class="banner">
+  <van-cell is-link title="联系客服" link-type="navigateTo" url="/pages/bill/bill" icon="service" title-class="cell-title"/>
+  <van-cell is-link title="帮助中心" link-type="navigateTo" url="/pages/bill/bill" icon="question" title-class="cell-title"/>
+</view> -->

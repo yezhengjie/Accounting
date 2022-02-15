@@ -1,0 +1,53 @@
+<!--cards.wxml-->
+<view class="content">
+  <view class="cardlist">
+    <view class="carditem" wx:for="{{list}}" wx:key="key">
+      <view bindtap='carddetail' data-id='{{item._id}}' data-carditem='{{item.cardtype}}'>
+        <view class="top">
+          <!--获取账户名称首字母 -->
+           <view class="t-left">{{item.abbreviation}}
+          </view>
+          <view class="t-right">
+            <view class="c-name">
+              <view class='c-name-1'>
+                {{item.cardname}}
+              </view>
+              <!-- <view class='c-name-2'>
+                <label class='c-name-zjxf'>{{item.zoushang}}</label>
+              </view> -->
+            </view>
+            <view class='c-name'>
+              <label wx:if="{{item.cardtype==3}}">
+                <label class='t-r-item'>
+                  <label class="t-r-i-z">账单日:{{item.bill_date}}</label>
+                </label>
+                <label class='t-r-item'>
+                  <label class="t-r-i-z">还款日:{{item.repayment_date}}</label>
+                </label>
+              </label>
+              <label class='c-xyk-tag'>{{item.typename}} {{item.card_number}}</label>
+            </view>
+          </view>
+        </view>
+        <view class='center'>
+          {{item.remarks}}
+        </view>
+        <view class="down">
+          <view class="d-item">
+            <label>额度:</label>
+            <label>{{item.fixed_quota}}</label>
+          </view>
+          <view class="d-item">
+            <label>已用:</label>
+            <label>{{item.used_quota}}</label>
+          </view>
+          <view class="d-item">
+            <label>可用:</label>
+            <label>{{item.available_quota}}</label>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <van-button type="primary" size="large" bindtap="addCard">添加资金账户</van-button>
+</view>
